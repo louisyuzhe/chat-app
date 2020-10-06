@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './App.css';
 import firebase from 'firebase/app';
 //Firebase SDK
@@ -64,6 +64,8 @@ function ChatRoom(){
 
   const[formValue, setFormValue] = useState(''); 
 
+  const dummy = useRef();
+
   //Write value to firebase
   const sendMessage = async(e) => {
     e.preventDefault();
@@ -78,13 +80,16 @@ function ChatRoom(){
 
     //reset form value
     setFormValue('');
+    dummy.current.scrollIntoView({ behavior: 'smooth'}); //Auto scroll down when new message entered
   }
 
   return (
     <>
-      <div>
+
+      <main>
         {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
-      </div>
+        <div ref={dummy}></div>
+      </main>
 
       <form onSubmit={sendMessage}>
         <input value={formValue} onChange={(e) => setFormValue(e.target.value)} />
