@@ -20,6 +20,9 @@ Features Offer:
 
 [image1]: ./README_media/login.png "Screenshot of login page"
 [image2]: ./README_media/main.png "Screenshot of main page"
+[image3]: ./README_media/authentication.png "Screenshot of Authentication page"
+[image4]: ./README_media/cloud_db.png "Screenshot of cloud firestore page"
+
 ---
 ## Preview
 
@@ -28,3 +31,9 @@ Features Offer:
 
 ### 2. Homepage of the chat app
 ![alt text][image2]
+
+### 3. Authentication with Google
+![alt text][image3]
+
+### 4. Cloud Firestore
+![alt text][image4]
