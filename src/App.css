@@ -145,6 +145,11 @@ img {
   margin: 2px 5px;
 }
 
+#signin {
+  width: 50%;
+  align-self: center;
+}
+
 @media screen and (min-width: 720px) {
   form button {
     margin: 1.25rem .75rem;
