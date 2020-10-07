@@ -46,10 +46,6 @@ main::-webkit-scrollbar {
   width: 0.25rem;
 }
 
-main::-webkit-scrollbar-track {
-  background: #1e1e24;
-}
-
 main::-webkit-scrollbar-thumb {
   background:  #0667ac;
 }
@@ -67,7 +63,7 @@ form {
 
 form button {
   background-color: #0b93f6;
-  margin: .75rem;
+  margin: .5rem;
 }
 
 input {
@@ -85,7 +81,7 @@ button {
   background-color:#0b93f6; /* Green */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 1rem 2rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -119,6 +115,7 @@ p {
   position: relative;
   color: white;
   text-align: center;
+  word-break: break-all;
 }
 
 .message {
@@ -146,4 +143,10 @@ img {
   height: 40px;
   border-radius: 50%;
   margin: 2px 5px;
+}
+
+@media screen and (min-width: 720px) {
+  form button {
+    margin: 1.25rem .75rem;
+  }
 }
