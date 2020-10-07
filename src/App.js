@@ -32,7 +32,7 @@ function App() {
       </header>
       <section>
         {user ? <ChatRoom /> : <SignIn />}
-      </section> 
+      </section>
     </div>
   );
 }
@@ -44,7 +44,7 @@ function SignIn(){
   }
 
   return(
-    <button onClick={signInWithGoogle}>Sign in with Google</button>
+    <button id="signin" onClick={signInWithGoogle}>Sign in with Google</button>
   )
 }
 
@@ -57,12 +57,12 @@ function SignOut(){
 function ChatRoom(){
   //ref a firestore collection
   const messagesRef = firestore.collection('messages');
-  //query doc in a collection 
-  const query = messagesRef.orderBy('createdAt').limit(25); 
+  //query doc in a collection
+  const query = messagesRef.orderBy('createdAt').limit(25);
   //use a hook to listen to data in real-time
   const [messages] = useCollectionData(query, {idField: 'id'});
 
-  const[formValue, setFormValue] = useState(''); 
+  const[formValue, setFormValue] = useState('');
 
   const dummy = useRef();
 
