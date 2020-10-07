@@ -66,8 +66,8 @@ form {
 }
 
 form button {
-  width: 20%;
   background-color: #0b93f6;
+  margin: .75rem;
 }
 
 
